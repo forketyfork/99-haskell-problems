@@ -2,7 +2,7 @@
   description = "Haskell development environment for 99 Haskell Problems";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/dc9637876d0dcc8c9e5e22986b857632effeb727";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
