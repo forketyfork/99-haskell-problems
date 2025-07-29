@@ -34,7 +34,7 @@ library
     Problem01
   build-depends:
     base >= 4.16 && < 5,
-    QuickCheck >= 2.14
+    QuickCheck == 2.14.3
   hs-source-dirs: src
   other-modules:
 
@@ -45,10 +45,10 @@ test-suite spec
   build-depends:
     base,
     ninety-nine-problems,
-    hspec >= 2.10,
-    QuickCheck >= 2.14
+    hspec == 2.11.12,
+    QuickCheck == 2.14.3
   hs-source-dirs: test
   other-modules:
     Problem01Spec
   build-tool-depends:
-    hspec-discover:hspec-discover >= 2.10
+    hspec-discover:hspec-discover == 2.11.12

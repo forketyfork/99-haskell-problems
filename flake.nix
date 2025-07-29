@@ -11,7 +11,7 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
         
-        haskellPackages = pkgs.haskellPackages;
+        haskellPackages = pkgs.haskell.packages.ghc9122;
         
         ghcWithPackages = haskellPackages.ghcWithPackages (ps: with ps; [
           QuickCheck
@@ -25,7 +25,6 @@
             # Haskell compiler with packages
             ghcWithPackages
             haskellPackages.cabal-install
-            haskellPackages.stack
             haskellPackages.haskell-language-server
             haskellPackages.hlint
             haskellPackages.ormolu
@@ -41,7 +40,6 @@
             echo "Available tools:"
             echo "  - ghc: $(ghc --version)"
             echo "  - cabal: $(cabal --version | head -n1)"
-            echo "  - stack: $(stack --version)"
             echo "  - hls: Haskell Language Server available"
             echo "  - hlint: Haskell linter"
             echo "  - ormolu: Haskell formatter"
