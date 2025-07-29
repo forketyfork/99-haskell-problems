@@ -1,0 +1,15 @@
+# Direnv
+.direnv/
+
+# Nix
+result
+result-*
+
+# Haskell
+dist-newstyle/
+*.hi
+.hie
+*.o
+*.dyn_hi
+*.dyn_o
+.stack-work/

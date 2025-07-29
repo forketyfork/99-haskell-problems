@@ -1,0 +1,49 @@
+-- Template for testing ProblemXX.hs
+-- Copy this file to ProblemXXSpec.hs and modify as needed
+-- Replace XX with the problem number (with leading zero, e.g., 01, 02, etc.)
+
+module ProblemXXSpec (spec) where
+
+import Test.Hspec
+import Test.QuickCheck
+import Control.Exception (evaluate)
+import ProblemXX -- Import your problem module
+
+spec :: Spec
+spec = do
+  describe "ProblemXX functions" $ do
+    -- Unit tests with specific inputs
+    -- it "function works with input [1,2,3,4]" $ do
+    --   yourFunction [1,2,3,4] `shouldBe` expectedResult
+    
+    -- it "function works with input ['x','y','z']" $ do
+    --   yourFunction ['x','y','z'] `shouldBe` expectedResult
+    
+    -- Edge case testing
+    -- it "handles empty list" $ do
+    --   evaluate (yourFunction []) `shouldThrow` errorCall "specific error message"
+    
+    -- it "handles singleton list" $ do
+    --   yourFunction [42] `shouldBe` expectedResult
+    
+    -- Type polymorphism testing
+    -- it "works with different data types" $ do
+    --   yourFunction ["hello", "world"] `shouldBe` "expectedResult"
+    --   yourFunction [True, False, True] `shouldBe` expectedResult
+    
+    -- Property-based testing with QuickCheck
+    -- it "satisfies QuickCheck property for Int lists" $ 
+    --   property (yourProperty :: [Int] -> Bool)
+      
+    -- it "satisfies QuickCheck property for Char lists" $ 
+    --   property (yourProperty :: [Char] -> Bool)
+      
+    -- it "satisfies QuickCheck property for String lists" $ 
+    --   property (yourProperty :: [String] -> Bool)
+    
+    -- Performance considerations (for later problems)
+    -- it "handles large inputs efficiently" $ do
+    --   let largeInput = [1..10000]
+    --   yourFunction largeInput `shouldSatisfy` someCondition
+    
+    pending "Add tests for this problem"

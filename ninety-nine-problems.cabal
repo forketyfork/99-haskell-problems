@@ -1,0 +1,54 @@
+cabal-version: 3.0
+name: ninety-nine-problems
+version: 0.1.0.0
+synopsis: Solutions to the 99 Haskell Problems
+description: Solutions to https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems
+homepage: https://github.com/forketyfork/99-haskell-problems
+license: MIT
+author: Forketyfork
+maintainer: forketyfork@icloud.com
+category: Education
+build-type: Simple
+extra-source-files: README.md
+
+common common-options
+  default-language: Haskell2010
+  ghc-options:
+    -Wall
+    -Wcompat
+    -Widentities
+    -Wincomplete-uni-patterns
+    -Wincomplete-record-updates
+    -Wredundant-constraints
+    -Wnoncanonical-monad-instances
+  if impl(ghc >= 8.2)
+    ghc-options: -fhide-source-paths
+  if impl(ghc >= 8.4)
+    ghc-options: -Wmissing-export-lists -Wpartial-fields
+  if impl(ghc >= 8.8)
+    ghc-options: -Wmissing-deriving-strategies -fwrite-ide-info -hiedir=.hie
+
+library
+  import: common-options
+  exposed-modules:
+    Problem01
+  build-depends:
+    base >= 4.16 && < 5,
+    QuickCheck >= 2.14
+  hs-source-dirs: src
+  other-modules:
+
+test-suite spec
+  import: common-options
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  build-depends:
+    base,
+    ninety-nine-problems,
+    hspec >= 2.10,
+    QuickCheck >= 2.14
+  hs-source-dirs: test
+  other-modules:
+    Problem01Spec
+  build-tool-depends:
+    hspec-discover:hspec-discover >= 2.10
