@@ -18,8 +18,8 @@
               src = pkgs.fetchFromGitHub {
                 owner = "jtdaugherty";
                 repo = "brick";
-                rev = "2.9";
-                sha256 = "sha256-03zp5v5v3n8ifxwmlgh6djayc2f2xvj7r7y8mvssxflq883bpr5p";
+                rev = "13fc9ede648de359366ed1d2b865fbd847fb2dc5";
+                sha256 = "sha256-t+S7BkKYuq71rsiffOTuwgnmlWwGPlp5dxHZscsu9w8=";
               };
             });
           };
