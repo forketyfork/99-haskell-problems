@@ -1,5 +1,6 @@
 # 99 Haskell Problems
 
+[![Build status](https://github.com/forketyfork/99-haskell-problems/actions/workflows/test.yml/badge.svg)](https://github.com/forketyfork/99-haskell-problems/actions/workflows/test.yml)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Haskell](https://img.shields.io/badge/language-Haskell-purple.svg)](https://www.haskell.org/)
 
