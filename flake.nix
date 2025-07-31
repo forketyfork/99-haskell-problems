@@ -2,7 +2,7 @@
   description = "Haskell development environment for 99 Haskell Problems";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/dc9637876d0dcc8c9e5e22986b857632effeb727";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -11,7 +11,19 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
         
-        haskellPackages = pkgs.haskell.packages.ghc9122;
+        haskellPackages = pkgs.haskell.packages.ghc9122.override {
+          overrides = self: super: {
+            brick = pkgs.haskell.lib.overrideCabal super.brick (oldAttrs: {
+              version = "2.9";
+              src = pkgs.fetchFromGitHub {
+                owner = "jtdaugherty";
+                repo = "brick";
+                rev = "2.9";
+                sha256 = "sha256-03zp5v5v3n8ifxwmlgh6djayc2f2xvj7r7y8mvssxflq883bpr5p";
+              };
+            });
+          };
+        };
         
         ghcWithPackages = haskellPackages.ghcWithPackages (ps: with ps; [
           QuickCheck
